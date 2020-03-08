@@ -1,0 +1,17 @@
+[Unit]
+Description = Event Manage System
+# Show more detail in https://github.com/p-salon/modern_times
+
+[Service]
+# Please change Working Directory and EnvironmentFile paths to suit your environment.
+WorkingDirectory=/home/psalon/modern_times
+EnvironmentFile=/etc/default/modern_times_env
+
+ExecStart=/bin/sh -c 'exec /home/psalon/modern_times/bin/server.sh start pro >> /var/log/modern_times.log 2>&1'
+User=psalon
+Group=psalon
+Type=forking
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
