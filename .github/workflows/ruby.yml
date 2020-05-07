@@ -30,4 +30,4 @@ jobs:
     - name: Install dependencies
       run: bundle install
     - name: Run tests
-      run: ./modern_times/bin/server.sh start pro
+      run: ./bin/server.sh start pro
